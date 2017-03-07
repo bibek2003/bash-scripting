@@ -1,0 +1,14 @@
+Awk automatically tokenizes procesed columns/fields into variables: $1, $2, $3 ... $n
+Note: $0 represents the current record row
+
+Usage:
+awk '{ Instructions }' file 
+awk '/pattern/ { procedure }' file
+awk -f script_file files
+
+Examples:
+Print the entire row one at a time, from an input file
+  #awk '{ print $0 }' sar26-cpu-data
+  
+Print specific columns from a file
+  #awk '{ print $1 }' sar26-cpu-data
